@@ -1,0 +1,1147 @@
+Future of Loan Approvals with Explainable AI
+
+1. INTRODUCTION
+
+In today’s digital economy, financial institutions receive thousands of loan applications each
+day—ranging from personal loans to mortgages and business credit. With this surge, manual
+assessment of each applicant's financial data—such as income, employment history, credit
+behaviour, and liabilities—has become increasingly burdensome. While modern systems give
+access to large volumes of data, the review process still involves time-consuming tasks like
+document validation, fraud detection, and eligibility checks. These inefficiencies can lead to
+delays in approval, increased operational costs, and in some cases, unfair rejections due to
+human oversight or bias.
+
+Traditional loan approval workflows, though structured, often lack the agility to handle large-
+scale demand with accuracy and fairness. Moreover, subjective judgments by loan officers can
+unintentionally introduce inconsistencies. As lending moves toward digital-first models, there's
+a growing demand for systems that can offer speed, precision, transparency, and compliance.
+Explainable AI (XAI) is emerging as a key enabler—enhancing automation while keeping
+decisions interpretable and auditable, especially in high-stakes domains like finance.
+
+This project proposes a smart loan approval framework powered by machine learning and
+explainable AI algorithms. The system is designed to simplify the lending workflow by
+extracting and analyzing critical information from submitted documents—such as income
+proof, bank statements, credit reports, and KYC details. It then matches these inputs against
+predefined policies and risk thresholds, identifying inconsistencies or red flags along the way.
+The process not only accelerates initial screening but also ensures thoroughness by analyzing
+each criterion through data-driven logic.
+
+For applicants with existing credit history, the system digs deeper—factoring in repayment
+consistency, defaults, and credit utilization to enhance the risk profile. It generates a composite
+score that reflects both financial health and risk, ranking candidates accordingly. This
+prioritized list is then provided to loan officers, allowing them to make informed and quicker
+decisions while focusing human expertise where it matters most—on borderline or complex
+cases.
+
+The highlight of this solution lies in its explainability. Unlike black-box AI systems, this
+framework provides clear, human-readable justifications for every recommendation. For
+example, an applicant might be flagged for high debt-to-income ratio, short employment
+duration, or insufficient collateral—each explained through visual dashboards or summary text.
+This builds transparency with clients, supports regulatory audits, and helps reduce disputes by
+making the approval or rejection criteria visible.
+
+By deploying such a system, financial institutions can dramatically reduce processing times,
+lower risks of bias, and ensure fairer outcomes. Explainable AI brings trust into the loop,
+making loan decisions not only faster and more consistent but also transparent and accountable.
+Built using Python and modern machine learning libraries, this approach sets a strong
+foundation for the future of intelligent, ethical, and customer-friendly lending.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+1
+
+Future of Loan Approvals with Explainable AI
+
+2. LITERATURE SURVEY
+
+The evolution of recruitment systems through the integration of machine learning and natural
+language processing has been a widely researched area. Several studies and experiments have
+been conducted to enhance candidate screening, ranking, and recommendation, addressing
+various aspects of e-recruitment. A summary of relevant works is presented below:
+
+[1] Title: "Explainable AI in Financial Decision-Making: A Comprehensive Review"
+
+Author: Sarah E. Williams
+
+Sarah E. Williams provides a comprehensive review of the applications of Explainable AI
+(XAI) in financial decision-making, with a specific focus on loan approvals. The survey covers
+various XAI techniques, their interpretability, and their role in enhancing transparency and
+accountability in the loan approval process.
+
+[2] Title: "Machine Learning Models for Credit Scoring: A Survey of Explainable
+Approaches"
+
+Author: Michael J. Davis
+
+In this survey, Michael J. Davis explores machine learning models for credit scoring,
+emphasizing explainable approaches. The review discusses the importance of interpretability
+in credit scoring models, addressing the challenges and opportunities of implementing XAI
+techniques for fair and transparent loan approval decisions.
+
+[3] Title: "Ethical Considerations in AI-Powered Loan Approvals: Insights from
+Explainable AI"
+
+Author: Emily R. Martinez
+
+Emily R. Martinez conducts a literature survey on ethical considerations in AI-powered loan
+approvals, with a focus on Explainable AI. The review explores the ethical implications of
+automated decision-making in lending and how XAI can contribute to ensuring fairness,
+accountability, and transparency in the loan approval process.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+2
+
+Future of Loan Approvals with Explainable AI
+
+[4] Title: "Interpretable Machine Learning for Regulatory Compliance in Financial
+Services"
+
+Author: David A. Thompson
+
+This survey by David A. Thompson delves into the use of interpretable machine learning for
+regulatory compliance in financial services, specifically in the context of loan approvals. The
+review explores how XAI can aid financial institutions in meeting regulatory requirements
+while maintaining transparency and trust in their decision-making processes.
+
+[5] Title: "The Role of Explainable AI in Enhancing Consumer Trust in Automated Loan
+Approvals"
+
+Author: Jessica L. Turner
+
+Jessica L. Turner's survey focuses on the role of Explainable AI in enhancing consumer trust
+in automated loan approvals. The review discusses how transparency and interpretability
+contribute to building trust between financial institutions and borrowers, fostering a positive
+relationship in the era of AI-powered lending.
+
+[6] Title: "A Comparative Study of Explainability Techniques in AI-Based Credit Decision
+Systems"
+
+Author: Nathan K. Brooks
+
+This paper compares various explainability techniques—such as LIME, SHAP, and
+counterfactual explanations—used in AI-based credit decision systems. Nathan K. Brooks
+evaluates their effectiveness in delivering transparent insights to both technical and non-
+technical stakeholders. The study highlights trade-offs between accuracy and interpretability
+and suggests best practices for selecting the most appropriate XAI methods based on regulatory
+and business needs.
+[7] Title: "Balancing Fairness and Accuracy: A Review of Bias Mitigation Strategies in
+XAI for Lending"
+
+Author: Priya S. Mehta
+Priya S. Mehta investigates how bias in AI models used for loan approval can be addressed
+through explainable techniques. The paper reviews fairness-aware machine learning methods
+and explains how XAI frameworks can identify and mitigate demographic biases. It also
+outlines case studies where explainable systems were successfully used to prevent
+discriminatory decisions in real-world financial applications.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+3
+
+Future of Loan Approvals with Explainable AI
+
+3. SYSTEM STUDY
+3.1 FEASIBILITY STUDY
+The feasibility study for the project "Future of Loan Approvals with Explainable AI" is
+conducted to determine whether the proposed system—enhancing loan approval processes
+using explainable artificial intelligence—is practical, cost-effective, and widely acceptable.
+The goal is to analyse how the system impacts financial resources, technical infrastructure, and
+user perception. The study is divided into three key categories:
+ 3.1.1 Economic Feasibility
+ 3.1.2 Technical Feasibility
+ 3.1.3 Social Feasibility
+3.1.1 ECONOMIC FEASIBILITY
+This segment evaluates if the system is financially viable for financial institutions. By
+automating and streamlining the loan approval process, explainable AI (XAI) reduces the
+dependency on manual analysis, resulting in long-term cost savings. Banks and lenders benefit
+from faster processing times and fewer human errors, which in turn increases operational
+efficiency. Open-source machine learning libraries like SHAP, LIME, scikit-learn, and
+TensorFlow help minimize software costs. While initial investments are needed for model
+training, integration, and staff upskilling, the returns in terms of faster approvals and improved
+customer satisfaction justify the expenditure. Thus, the system is economically feasible.
+3.1.2 TECHNICAL FEASIBILITY
+This section assesses whether the existing technical ecosystem is capable of supporting the
+proposed AI-based solution. The loan approval system powered by explainable AI can be
+integrated into current banking software with the use of APIs and cloud infrastructure. The
+models do not require high-end servers or specialized hardware, as they can be deployed on
+existing cloud platforms like AWS, Azure, or Google Cloud. Furthermore, explainability
+frameworks like SHAP and LIME can be used alongside traditional machine learning models,
+ensuring transparency without significantly increasing computational complexity. Therefore,
+the project is technically feasible using currently available tools and technologies.
+3.1.3 SOCIAL FEASIBILITY
+This analysis focuses on the willingness of users—loan officers, underwriters, and applicants—
+to adopt the system. One of the major concerns with AI in decision-making is the "black-box"
+nature of models. However, incorporating explainability into the AI model addresses this issue
+by making the decision logic transparent. This increases trust among loan applicants, who can
+understand the reasons behind approvals or rejections, and among bank employees, who can
+validate AI suggestions with confidence. User-friendly dashboards, clear visual explanations,
+and proper training will further ease the transition and boost acceptance. As a result, the system
+demonstrates high social feasibility.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+4
+
+Future of Loan Approvals with Explainable AI
+
+4. SYSTEM ANALYSIS
+4.1 EXISTING SYSTEM
+The existing loan approval process in most financial institutions is largely dependent on manual
+evaluation by credit officers. Applicants are typically assessed using fixed criteria such as credit
+score, income, employment status, and debt-to-income ratio. While some banks use basic rule-
+based software for credit scoring, the overall decision-making is still heavily reliant on human
+judgment. This traditional process is time-consuming, often lacks transparency, and is
+susceptible to bias or inconsistency. Moreover, applicants are rarely given clear explanations
+for rejection, leading to dissatisfaction and reduced trust in the system.
+4.2 DISADVANTAGES OF EXISTING SYSTEM
+ Lack of Transparency: Applicants are not provided with specific reasons for loan
+approval or rejection.
+ Manual Effort: The process involves considerable human intervention, making it slow
+and resource-intensive.
+ Bias and Inconsistency: Human judgment can be influenced by unconscious biases or
+inconsistency in criteria interpretation.
+ Limited Personalization: Rule-based systems may fail to recognize the potential of
+applicants with unconventional financial backgrounds.
+ Poor Customer Experience: Delays and lack of clarity reduce satisfaction and trust
+among applicants.
+4.3 PROPOSED SYSTEM
+
+The proposed system integrates Explainable Artificial Intelligence (XAI) into the loan
+approval process to improve decision-making, transparency, and efficiency. Applicants submit
+financial and personal information through a digital platform, which is then analysed by
+machine learning models trained on historical lending data. These models assess
+creditworthiness by considering a wider range of parameters such as income patterns, spending
+behaviour, and alternative financial data.
+
+Crucially, the system provides clear, interpretable justifications for every decision using tools
+like SHAP (SHapley Additive exPlanations) or LIME (Local Interpretable Model-agnostic
+Explanations). This allows both customers and loan officers to understand why a loan was
+approved or denied. As a result, the system enhances fairness, speeds up the approval process,
+and builds greater trust between lenders and borrowers.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+5
+
+Future of Loan Approvals with Explainable AI
+
+4.4 ADVANTAGES OF PROPOSED SYSTEM
+ Improved Transparency: Explainable AI provides clear justifications for loan
+decisions, showing applicants the exact factors that led to approval or rejection. This
+builds trust in the system and helps users understand how to improve their eligibility.
+ Faster Approvals: Automation and real-time data analysis drastically reduce the time
+taken for loan evaluation. Applications can be processed within minutes, improving
+operational efficiency and customer satisfaction.
+ Fairer Decisions: The system minimizes human bias by relying on data-driven
+assessments. Every applicant is evaluated using the same criteria, ensuring a more
+equitable and inclusive loan approval process.
+ Enhanced User Trust: Transparent decision-making boosts user confidence in the
+financial institution. Applicants are more likely to accept outcomes when they clearly
+understand the reasoning behind them.
+ Scalability: The system can handle thousands of applications concurrently without
+compromising speed or accuracy. It is ideal for both small lenders and large financial
+institutions aiming for digital expansion.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+6
+
+Future of Loan Approvals with Explainable AI
+
+5. SYSTEM SPECIFICATION
+
+5.1 HARDWARE REQUIREMENTS
+ System: Intel i5 or above (for faster model training and processing)
+ Hard Disk: 1 TB
+ Monitor: 14” Colour Monitor
+ Mouse: Optical Mouse
+ RAM: 4 GB minimum (Development); 32 GB (Recommended for deployment)
+
+5.2 SOFTWARE REQUIREMENTS
+ Operating System: Windows 10/11 (64-bit)
+ Coding Language: Python
+ Front-End: HTML, CSS, JavaScript
+ Designing: HTML, CSS
+ Framework: Scikit-learn (for AI/ML modeling), SHAP (for explainability).
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+7
+
+Future of Loan Approvals with Explainable AI
+
+6. HARDWARE AND SOFTWARE REQUIREMENTS
+6.1 REQUIREMENT ANALYSIS
+
+To provide a seamless and trustworthy loan approval experience, the system focuses on a user-
+friendly interface coupled with detailed, explainable results. Users can easily navigate through
+the application process and view personalized feedback on their loan application outcomes.
+The application is web-based and compatible with major browsers like Google Chrome,
+enabling accessibility across a wide range of platforms and devices.
+
+6.2 REQUIREMENT SPECIFICATION
+6.2.1 Functional Requirements
+ Graphical User Interface (GUI) for both applicants and loan officers
+ Loan application submission with document upload
+ Applicant profiling using AI/ML models
+ Creditworthiness prediction and scoring
+ Explainable output showing reasons for approval/rejection
+6.2.2 Software Requirements
+ Python
+ Scikit-learn, SHAP or LIME (for explainability)
+6.2.3 Operating Systems Supported
+ Windows 10/11 (64-bit)
+6.2.4 Technologies and Languages Used
+ Python, HTML, CSS, JavaScript
+ Machine Learning libraries: Scikit-learn, XGBoost
+ Explainable AI libraries: SHAP, LIME
+6.2.5 Debugger and Emulator
+ Any modern web browser (Recommended: Google Chrome)
+ Developer tools built into browsers for testing frontend behaviour
+6.2.6 Hardware Requirements
+ Processor: Intel i5 or above (for development and training models)
+ RAM: Minimum 16 GB (32 GB recommended for training complex models)
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+8
+
+Future of Loan Approvals with Explainable AI
+
+7. SYSTEM DESIGN
+7.1 System Architecture
+
+7.2 Data Flow Diagram (DFD):
+1. The Data Flow Diagram (DFD), also known as a bubble chart, is a simple graphical
+representation that depicts the flow of data within a system. It showcases how input
+data is transformed through processes into output.
+2. It highlights the processes, data stores, external entities, and data flows, providing a
+clear understanding of system functionality.
+3. DFD is an essential modeling tool that helps illustrate how information moves through
+the system and the series of transformations applied to the data from input to output.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+9
+
+Future of Loan Approvals with Explainable AI
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+10
+
+Future of Loan Approvals with Explainable AI
+
+7.3 UML Diagrams:
+UML stands for Unified Modeling Language. UML is a standardized general-purpose
+modeling language in the field of object-oriented software engineering. The standard is
+managed, and was created by, the Object Management Group.
+
+The goal is for UML to become a common language for creating models of object oriented
+computer software. In its current form UML is comprised of two major components: a Meta-
+model and a notation. In the future, some form of method or process may also be added to; or
+associated with, UML.
+
+The Unified Modeling Language is a standard language for specifying, Visualization,
+Constructing and documenting the artifacts of software system, as well as for business
+modeling and other non-software systems.
+The UML represents a collection of best engineering practices that have proven successful in
+the modeling of large and complex systems.
+
+The UML is a very important part of developing objects oriented software and the software
+development process. The UML uses mostly graphical notations to express the design of
+software projects.
+Goals of UML:
+The Primary goals in the design of the UML are as follows:
+1. Provides users a ready-to-use, expressive visual modeling Language so that they can
+develop and exchange meaningful models.
+2. Provides extendibility and specialization mechanisms to extend the core concepts.
+3. Be independent of particular programming languages and development process.
+4. Provide a formal basis for understanding the modeling language.
+5. Encourage the growth of OO tools market.
+6. Supports higher level development concepts such as collaborations, frameworks,
+patterns and components.
+7. Integrate best practices.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+11
+
+Future of Loan Approvals with Explainable AI
+
+7.4 Use Case Diagram:
+A use case diagram in the Unified Modeling Language (UML) is a type of behavioral diagram
+defined by and created from a Use-case analysis. Its purpose is to present a graphical overview
+of the functionality provided by a system in terms of actors, their goals (represented as use
+cases), and any dependencies between those use cases. The main purpose of a use case diagram
+is to show what system functions are performed for which actor. Roles of the actors in the
+system can be depicted.
+
+7.5 Class Diagram:
+In software engineering, a class diagram in the Unified Modeling Language (UML) is a type
+of static structure diagram that describes the structure of a system by showing the system's
+classes, their attributes, operations (or methods), and the relationships among the classes. It
+explains which class contains information.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+12
+
+Future of Loan Approvals with Explainable AI
+
+7.6 Sequence Diagram:
+A sequence diagram in Unified Modeling Language (UML) is a kind of interaction diagram
+that shows how processes operate with one another and in what order. It is a construct of a
+Message Sequence Chart. Sequence diagrams are sometimes called event diagrams, event
+scenarios, and timing diagrams.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+13
+
+Future of Loan Approvals with Explainable AI
+
+7.7 Activity Diagram:
+Activity diagrams are graphical representations of workflows of stepwise activities and actions
+with support for choice, iteration and concurrency. In the Unified Modeling Language, activity
+diagrams can be used to describe the business and operational step-by-step workflows of
+components in a system. An activity diagram shows the overall flow of control.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+14
+
+Future of Loan Approvals with Explainable AI
+
+8. INPUT AND OUTPUT DESIGN
+8.1 INPUT DESIGN
+
+Input design in the loan approval system using Explainable AI focuses on capturing user
+financial data, employment history, and identity information with accuracy and simplicity. Data
+entry is conducted through structured web forms where users submit information such as
+income, credit score, employment status, and loan amount. Uploaded documents like salary
+slips or bank statements are also processed.
+
+The system includes validations to ensure input accuracy and completeness, minimizing user
+errors. Sensitive data is handled securely, and the design ensures minimal user clicks and
+simplified data flow for a seamless experience.
+
+ Collects applicant data such as income, age, loan type, and credit history.
+ Organized forms guide users with tooltips and clear labels.
+ Validations ensure correct formats and prompt users in case of errors.
+ Data is pre-processed and transformed for model evaluation.
+8.2 OBJECTIVES
+
+The objective of the input design is to streamline data collection for loan assessment using
+machine learning algorithms, while ensuring ease of use and security.
+
+ Converts raw user input into structured data for the AI model.
+ Ensures form simplicity, reducing confusion during the submission process.
+ Validates inputs and gives feedback on invalid or missing fields.
+ Maintains data integrity and privacy through secure input handling.
+8.3 OUTPUT DESIGN
+
+Output design centers around delivering loan approval results with clarity and explanation. The
+system displays whether the loan is approved or rejected, along with key reasons driving the
+decision, using visualizations where appropriate.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+15
+
+Future of Loan Approvals with Explainable AI
+
+Explainable AI techniques like SHAP values help break down how each input factor
+contributed to the outcome. Results are shown on-screen and can be downloaded as reports for
+offline use.
+
+ Displays decision outcome (Approved/Rejected) with confidence scores.
+ Highlights the top contributing features to the decision (e.g., income, loan amount).
+ Ensures outputs are easy to interpret by both applicants and loan officers.
+ Results are presented in real-time, accessible through browser.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+16
+
+Future of Loan Approvals with Explainable AI
+
+9. IMPLEMENTATION
+
+9.1 Upload Loan Application Dataset
+ The user uploads the Previous_Application.csv dataset from Kaggle.
+ The application reads the dataset and parses the data into structured format.
+ Initial visualization is performed to display counts of:
+o Approved loans
+o Rejected loans
+o Reasons for rejection (plotted using graphs)
+
+9.2 Pre-process Dataset
+ Handling Missing Values:
+o Null or missing values are filled or dropped as per the column’s data type and
+importance.
+ Label Encoding:
+o Categorical columns are converted into numerical values using Label Encoder.
+ Normalization:
+o All feature values are normalized to ensure consistent scaling and improve
+model performance.
+9.3 Split Dataset into Train & Test
+ Dataset is split into:
+o Training Set: 80% of data used to train the models.
+o Testing Set: 20% of data used to evaluate model accuracy.
+ Randomized splitting ensures unbiased results.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+17
+
+Future of Loan Approvals with Explainable AI
+
+9.4 Train AI on Loan Approval
+ A Random Forest Classifier is trained using the 80% training data.
+ The model learns patterns from the features to predict:
+o Whether a loan should be approved or rejected.
+ The model is tested on the 20% test data to calculate:
+o Accuracy
+o Confusion matrix
+o Classification report
+9.5 Train AI on Loan Rejections
+ A separate Random Forest model is trained to:
+o Predict the reason for loan rejection.
+ The same 80/20 train-test split is used.
+ Evaluation is done using:
+o Accuracy score
+o Precision/recall for each reason class
+9.6 Explainable AI
+ SHAP (SHapley Additive Explanations) is used to explain model predictions.
+ For each prediction, SHAP identifies and visualizes:
+o Top contributing features
+o Direction of feature influence (positive/negative)
+ This helps users understand why a loan was approved or rejected.
+9.7 Predict Loan Status using Test Data
+ User uploads new/unseen test data.
+ The trained model performs:
+o Prediction of loan approval status.
+o Prediction of approval/rejection reason.
+ Results are displayed along with SHAP explanations for transparency.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+18
+
+Future of Loan Approvals with Explainable AI
+
+10. SOURCE CODE
+10.1 LoanStatus.py
+from tkinter import *
+import tkinter
+from tkinter import filedialog
+import numpy as np
+from tkinter import simpledialog
+from sklearn.model_selection import train_test_split
+from tkinter import ttk
+from tkinter.filedialog import askopenfilename
+import os
+import pickle
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import accuracy_score
+import pandas as pd
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+from sklearn.metrics import confusion_matrix
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import LabelEncoder
+from sklearn.ensemble import RandomForestClassifier#importing ML classes
+import shap
+
+main = tkinter.Tk()
+main.title("Future of Loan Approvals with Explainable AI") #designing main screen
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+19
+
+Future of Loan Approvals with Explainable AI
+
+main.geometry("1000x650")
+
+global filename, loan_status, loan_reject_reason, status_names, reject_names, label_encoder,
+scaler, cols
+global loan_X_train, loan_X_test, loan_y_train, loan_y_test
+global reject_X_train, reject_X_test, reject_y_train, reject_y_test
+global accuracy, precision, recall, fscore
+global rf, reject_rf, dataset, X
+
+def loadDataset():
+global filename, dataset, loan_status, loan_reject_reason, status_names, reject_names
+filename = filedialog.askopenfilename(initialdir="Dataset")
+text.delete('1.0', END)
+text.insert(END,filename+" loaded\n\n")
+dataset = pd.read_csv(filename, nrows=20000)
+text.insert(END,str(dataset.head()))
+loan_status = dataset['NAME_CONTRACT_STATUS']
+loan_reject_reason = dataset['CODE_REJECT_REASON']
+#visualizing loan status class labels
+status_names, status_count = np.unique(loan_status, return_counts = True)
+reject_names, reject_count = np.unique(loan_reject_reason, return_counts = True)
+loan_df = []
+for i in range(len(status_names)):
+loan_df.append([status_names[i], status_count[i]])
+loan_df = pd.DataFrame(loan_df, columns=['Loan_Status', 'Count'])
+reject_df = []
+for i in range(len(reject_names)):
+reject_df.append([reject_names[i], reject_count[i]])
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+20
+
+Future of Loan Approvals with Explainable AI
+
+reject_df = pd.DataFrame(reject_df, columns=['Reject_Reason', 'Count'])
+
+fig, axs = plt.subplots(1, 2, figsize=(14, 4))
+sns.barplot(x="Loan_Status", y='Count', data=loan_df, ax=axs[0])
+sns.barplot(x="Reject_Reason", y='Count', data=reject_df, ax=axs[1])
+axs[0].set_title("Loan Application Status Graph")
+axs[1].set_title("Reject Reason Graph")
+plt.show()
+
+def processDataset():
+text.delete('1.0', END)
+global dataset, scaler, label_encoder, cols, loan_status, loan_reject_reason, X
+label_encoder = []
+#converting non-numeric data to numeric values
+dataset.fillna(0, inplace = True)
+label_encoder = []
+columns = dataset.columns
+types = dataset.dtypes.values
+cols = []
+for i in range(len(types)):
+name = types[i]
+if name == 'object': #finding column with object type
+le = LabelEncoder()
+dataset[columns[i]] =
+pd.Series(le.fit_transform(dataset[columns[i]].astype(str)))#encode all str columns to numeric
+label_encoder.append(le)
+cols.append(columns[i])
+dataset.fillna(0, inplace = True)
+loan_status = dataset['NAME_CONTRACT_STATUS']
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+21
+
+Future of Loan Approvals with Explainable AI
+
+loan_reject_reason = dataset['CODE_REJECT_REASON']
+dataset.drop(['NAME_CONTRACT_STATUS', 'CODE_REJECT_REASON'], axis =
+1,inplace=True)
+X = dataset.values
+scaler = StandardScaler()
+X = scaler.fit_transform(X)#normalize train features
+text.insert(END,"Normalized * Processed Features = "+str(X))
+
+def splitDataset():
+text.delete('1.0', END)
+global X, loan_status, loan_reject_reason
+global loan_X_train, loan_X_test, loan_y_train, loan_y_test
+global reject_X_train, reject_X_test, reject_y_train, reject_y_test
+#split dataset into train and test
+loan_X_train, loan_X_test, loan_y_train, loan_y_test = train_test_split(X, loan_status,
+test_size = 0.2)
+reject_X_train, reject_X_test, reject_y_train, reject_y_test = train_test_split(X,
+loan_reject_reason, test_size = 0.2)
+text.insert(END,"Total records found in dataset = "+str(X.shape[0])+"\n")
+text.insert(END,"Total features found in dataset= "+str(X.shape[1])+"\n")
+text.insert(END,"80% dataset for training : "+str(loan_X_train.shape[0])+"\n")
+text.insert(END,"20% dataset for testing  : "+str(loan_X_test.shape[0])+"\n")
+
+def calculateMetrics(algorithm, predict, y_test, label_names):
+a = accuracy_score(y_test,predict)*100
+p = precision_score(y_test, predict,average='macro') * 100
+r = recall_score(y_test, predict,average='macro') * 100
+f = f1_score(y_test, predict,average='macro') * 100
+accuracy.append(a)
+precision.append(p)
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+22
+
+Future of Loan Approvals with Explainable AI
+
+recall.append(r)
+fscore.append(f)
+text.insert(END,algorithm+" Accuracy  :  "+str(a)+"\n")
+text.insert(END,algorithm+" Precision : "+str(p)+"\n")
+text.insert(END,algorithm+" Recall    : "+str(r)+"\n")
+text.insert(END,algorithm+" FScore    : "+str(f)+"\n\n")
+conf_matrix = confusion_matrix(y_test, predict)
+plt.figure(figsize =(7, 5))
+ax = sns.heatmap(conf_matrix, xticklabels = label_names, yticklabels = label_names,
+annot = True, cmap="viridis" ,fmt ="g");
+ax.set_ylim([0,len(label_names)])
+plt.title(algorithm+" Confusion matrix")
+plt.xticks(rotation=90)
+plt.ylabel('True class')
+plt.xlabel('Predicted class')
+plt.tight_layout()
+plt.show()
+
+def aiApproval():
+text.delete('1.0', END)
+global loan_X_train, loan_X_test, loan_y_train, loan_y_test
+global reject_X_train, reject_X_test, reject_y_train, reject_y_test
+global accuracy, precision, recall, fscore, rf, status_names
+#define global variables to save accuracy and other metrics
+accuracy = []
+precision = []
+recall = []
+fscore = []
+rf = RandomForestClassifier()
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+23
+
+Future of Loan Approvals with Explainable AI
+
+rf.fit(loan_X_train, loan_y_train)
+predict = rf.predict(loan_X_test)
+calculateMetrics("Random Forest Loan Status", predict, loan_y_test, status_names)
+
+def aiReject():
+global reject_X_train, reject_X_test, reject_y_train, reject_y_test
+global accuracy, precision, recall, fscore, rf, reject_names, reject_rf
+reject_rf = RandomForestClassifier()
+reject_rf.fit(reject_X_train, reject_y_train)
+predict = reject_rf.predict(reject_X_test)
+calculateMetrics("Random Forest Loan Rejection", predict, reject_y_test, reject_names)
+
+def explainAI():
+global rf
+features_names = ['SK_ID_PREV', 'SK_ID_CURR', 'NAME_CONTRACT_TYPE',
+'AMT_ANNUITY', 'AMT_APPLICATION', 'AMT_CREDIT', 'AMT_DOWN_PAYMENT',
+'AMT_GOODS_PRICE',
+'WEEKDAY_APPR_PROCESS_START', 'HOUR_APPR_PROCESS_START',
+'FLAG_LAST_APPL_PER_CONTRACT', 'NFLAG_LAST_APPL_IN_DAY',
+'RATE_DOWN_PAYMENT',
+'RATE_INTEREST_PRIMARY', 'RATE_INTEREST_PRIVILEGED',
+'NAME_CASH_LOAN_PURPOSE', 'DAYS_DECISION',
+'NAME_PAYMENT_TYPE', 'NAME_TYPE_SUITE',
+'NAME_CLIENT_TYPE', 'NAME_GOODS_CATEGORY', 'NAME_PORTFOLIO',
+'NAME_PRODUCT_TYPE', 'CHANNEL_TYPE', 'SELLERPLACE_AREA',
+'NAME_SELLER_INDUSTRY', 'CNT_PAYMENT', 'NAME_YIELD_GROUP',
+'PRODUCT_COMBINATION', 'DAYS_FIRST_DRAWING',
+'DAYS_FIRST_DUE', 'DAYS_LAST_DUE_1ST_VERSION', 'DAYS_LAST_DUE',
+'DAYS_TERMINATION',
+'NFLAG_INSURED_ON_APPROVAL']
+explainer = shap.TreeExplainer(rf)
+shap_values = explainer.shap_values(loan_X_test[0:200])
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+24
+
+Future of Loan Approvals with Explainable AI
+
+shap.summary_plot(shap_values, feature_names=features_names)
+plt.show()
+
+def predict():
+text.delete('1.0', END)
+global rf, reject_rf, scaler, label_encoder, cols, status_names, reject_names
+filename = filedialog.askopenfilename(initialdir="Dataset")
+test_data = pd.read_csv(filename)
+test_data.fillna(0, inplace = True)
+for i in range(len(cols)):
+test_data[cols[i]] = pd.Series(label_encoder[i].transform(test_data[cols[i]].astype(str)))
+test_data.fillna(0, inplace = True)
+test_data.drop(['NAME_CONTRACT_STATUS', 'CODE_REJECT_REASON'], axis =
+1,inplace=True)
+test = test_data.values
+X = test_data.values
+X = scaler.transform(X)
+loan_predict = rf.predict(X)
+reject_predict = reject_rf.predict(X)
+for i in range(len(loan_predict)):
+text.insert(END,"Test Data = "+str(test[i])+"\n")
+text.insert(END,"Loan Approval Status = "+str(status_names[loan_predict[i]])+"\n")
+text.insert(END,"Loan Approval/Rejection Reason =
+"+str(reject_names[reject_predict[i]])+"\n\n")
+
+font = ('times', 16, 'bold')
+title = Label(main, text='Future of Loan Approvals with Explainable AI', justify=LEFT)
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+25
+
+Future of Loan Approvals with Explainable AI
+
+title.config(bg='lavender blush', fg='DarkOrchid1')
+title.config(font=font)
+title.config(height=3, width=120)
+title.place(x=100,y=5)
+title.pack()
+
+font1 = ('times', 13, 'bold')
+uploadButton = Button(main, text="Upload Loan Application Dataset",
+command=loadDataset)
+uploadButton.place(x=10,y=100)
+uploadButton.config(font=font1)
+
+processButton = Button(main, text="Preprocess Dataset", command=processDataset)
+processButton.place(x=330,y=100)
+processButton.config(font=font1)
+
+splitButton = Button(main, text="Split Dataset Train & Test", command=splitDataset)
+splitButton.place(x=620,y=100)
+splitButton.config(font=font1)
+
+approvalButton = Button(main, text="Train AI on Loan Approval", command=aiApproval)
+approvalButton.place(x=10,y=150)
+approvalButton.config(font=font1)
+
+rejectButton = Button(main, text="Train AI on Loan Rejections", command=aiReject)
+rejectButton.place(x=330,y=150)
+rejectButton.config(font=font1)
+
+explainButton = Button(main, text="Explainable AI", command=explainAI)
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+26
+
+Future of Loan Approvals with Explainable AI
+
+explainButton.place(x=620,y=150)
+explainButton.config(font=font1)
+
+predictButton = Button(main, text="Predict Loan Status using Test Data", command=predict)
+predictButton.place(x=820,y=150)
+predictButton.config(font=font1)
+
+font1 = ('times', 12, 'bold')
+text=Text(main,height=22,width=140)
+scroll=Scrollbar(text)
+text.configure(yscrollcommand=scroll.set)
+text.place(x=10,y=200)
+text.config(font=font1)
+
+main.config(bg='light coral')
+main.mainloop()
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+27
+
+Future of Loan Approvals with Explainable AI
+
+11.SCREENSHOTS
+11.1 HOME PAGE
+To run project double click on ‘run.bat’ file to get below screen
+
+11.2 Uploading and Visualizing Loan Application Dataset
+In above screen click on ‘Upload Loan Application Dataset’ button to upload dataset and then
+will get below output
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+28
+
+Future of Loan Approvals with Explainable AI
+
+In above screen selecting and uploading ‘loan_application.csv’ file and then click on ‘Open’
+button to load dataset and get below output
+
+11.3 Dataset Overview and Class Distribution Before Preprocessing
+
+In above screen dataset loaded and in text area can see few records from dataset and in first
+graph x-axis represents LOAN STATUS and y-axis represents Number of Records available in
+that LOAN STATUS class label. In second graph x-axis represents REJECTION REASON and
+y-axis represents records size and in dataset we have both numeric and non-numeric values so
+to convert to numeric data then click on ‘Pre-process Dataset’ button to get below output
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+29
+
+Future of Loan Approvals with Explainable AI
+
+11.4 Dataset Preprocessing and Splitting into Train-Test Sets
+
+In above screen dataset converted to numeric format and then click on ‘Split Dataset Train &
+Test’ button to split dataset into train and test and then will get below output
+11.5 Training AI Model for Loan Status Prediction
+
+In above screen can see dataset size with total number of features and then can see TRAIN and
+TEST size and now click on ‘Train AI on Loan Status Approval’ button to train AI and get
+below output
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+30
+
+Future of Loan Approvals with Explainable AI
+
+11.6 Loan Status Prediction Results with Random Forest
+
+In above screen AI Random Forest got 95% accuracy on Loan STATUS and can see other
+metrics also. In above confusion matrix graph x-axis represents ‘LOAN STATUS Predicted
+Labels’ and y-axis represents TRUE labels and all boxes in diagnol contains correct prediction
+count and remaining blue boxes contains incorrect prediction count which are very few. Now
+click on ‘Train AI on Loan Rejections’ button to train AI on rejection reason and get below
+output
+11.7 Rejection Reason Prediction Results with Random Forest
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+31
+
+Future of Loan Approvals with Explainable AI
+
+In above screen AI on REJECTION got 90% accuracy and in confusion matrix graph x-axis
+represents ‘Rejection Reason Predicted Labels’ and y-axis represents True label and in diagnol
+boxes we can see correct prediction count and remaining boxes contains incorrect prediction
+count. Now click on ‘Explainable AI’ button to get below features explanation on prediction
+
+11.8 SHAP-Based Feature Contribution for Loan Prediction
+
+In above SHAP explanation screen in each bar we can see 4 different colours and each colour
+represents one class label and based on colour percentage we can say which feature names is
+contributing how much to predict that class label. Now close above graph and then click on
+‘Predict Loan Status using Test Data’ button to upload test data and then will get below
+prediction
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+32
+
+Future of Loan Approvals with Explainable AI
+
+11.9 Uploading Test Data for Loan Prediction
+
+In above screen selecting and uploading testData.csv file and then click on ‘Open’ button to
+get below output
+
+11.10 Test Data Prediction Results for Loan Status and Rejection Reason
+
+In below screen in square bracket we can see test data and then in blue colour selected line next
+to TEST data we can see LOAN STATUS prediction and REASON details. Scroll down above
+output to view all predictions
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+33
+
+Future of Loan Approvals with Explainable AI
+
+11.11 Additional Prediction Outputs and Rejection Reason Description
+
+In above screen can see other prediction output.
+For Reason Rejected code you can read below description
+11.12 Explanation of Rejected Reason Codes
+
+In above screen read blue colour selected text to know about REJECTED REASON codes
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+34
+
+Future of Loan Approvals with Explainable AI
+
+12. SYSTEM TESTING
+
+The purpose of system testing is to verify the overall behavior and functionality of the
+integrated software system. It ensures that the system meets the specified requirements and
+user expectations, without any unacceptable failures. The testing process is designed to identify
+any weaknesses or errors in the system that could lead to undesired behavior or functionality
+issues. System testing provides a way to confirm that all components of the software work
+together seamlessly, delivering the intended outcomes.
+12.1 TYPES OF TESTS
+ Unit Testing: Unit testing is performed on individual components or units of the
+software. Each unit of the system is tested to ensure that it performs as expected. The
+purpose of unit testing is to identify and fix any errors at the early stage of development.
+Unit tests are written to validate specific business logic, system configurations, and
+business processes. It ensures that each path in the code functions according to the
+requirements.
+ Integration Testing: Integration testing checks whether the integrated software
+components work together as a complete system. This type of test focuses on detecting
+errors that may arise from the interaction between different components, even though
+each individual component may have passed unit testing. It ensures that the overall
+system functions as intended when all components are combined.
+ Functional Testing: Functional testing focuses on verifying that the software functions
+in alignment with the business and technical requirements. It systematically
+demonstrates that all functions of the software are working as expected. This testing is
+crucial to ensure that valid inputs are processed correctly, invalid inputs are rejected,
+and all outputs are generated as specified.
+ System Test: System testing ensures that the entire integrated software system
+functions as expected, meeting the specified requirements. It tests the system
+configuration to ensure that the results are consistent and predictable. System testing
+also includes verifying the integration of different modules within the system, ensuring
+that all parts of the system are properly connected and functioning.
+ White Box Testing: White Box Testing involves the testing of the internal workings
+and structure of the system. Testers have knowledge of the code and structure, allowing
+them to test specific areas of the software that may not be accessible through standard
+testing methods. This helps identify any issues within the internal structure of the
+software.
+ Black Box Testing: Black Box Testing is focused on testing the software without any
+knowledge of its internal workings. Testers only focus on inputs and outputs, ensuring
+that the software meets its functional specifications. The software is treated as a "black
+box," where the tester does not consider how the system processes the input to generate
+the output.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+35
+
+Future of Loan Approvals with Explainable AI
+
+12.2 Test Strategy and Approach
+Testing will be performed manually for functional checks, while automated scripts will handle
+integration and system testing. Field testing will be executed based on detailed test cases
+designed to validate key features and system requirements.
+Test Objectives:
+ Ensure that all system functionalities are accessible and operational.
+ Validate that each field in the application works as expected.
+ Verify that links within the application direct the user to the correct pages without error.
+ Ensure that there is no delay in displaying entry screens, messages, and responses.
+Features to be Tested:
+ Verify that all user inputs adhere to the correct format.
+ Prevent the duplication of entries within the system.
+ Ensure that all navigation links take users to the correct destination.
+ Test that all fields correctly handle both valid and invalid inputs.
+Integration Testing: Integration testing will focus on ensuring that software components
+interact without issues. The goal is to ensure that the integration of modules does not result in
+any failures or errors. Each component will be tested in combination with others to verify
+seamless integration and identify any interface issues.
+Test Results: All test cases passed successfully, confirming that the integrated components of
+the system work as expected. No defects were encountered during testing.
+Acceptance Testing: User Acceptance Testing (UAT) will be conducted to ensure that the
+software meets user requirements and is functional from an end-user perspective. UAT will
+involve real users interacting with the system to confirm that it meets their needs.
+Test Results: All UAT test cases were executed successfully, and the system met all functional
+and business requirements as expected. No defects were identified during this phase.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+36
+
+Future of Loan Approvals with Explainable AI
+
+13. FUTURE ENHANCEMENT
+
+The "Future of Loan Approvals with Explainable AI" project can be enhanced by integrating
+more advanced machine learning models, such as XGBoost, Support Vector Machines, or
+Neural Networks, to further improve the model's accuracy and robustness. Hyperparameter
+tuning techniques like GridSearchCV or RandomizedSearchCV can also be implemented for
+optimization. Additionally, improving the explainability of rejection reasons through advanced
+techniques like LIME (Local Interpretable Model-agnostic Explanations) can provide deeper
+insights into the model's decision-making process.
+
+Introducing real-time prediction capabilities would allow the system to process and predict
+loan statuses and rejection reasons instantly, enhancing its usability for live applications.
+Further automating data preprocessing with advanced steps such as One-Hot Encoding, outlier
+detection, and feature selection could improve model performance and simplify the workflow
+for users. Developing a dynamic dashboard that visualizes model metrics and dataset statistics
+would give users better insights into the system's performance.
+
+Integration with cloud platforms like AWS or Azure would enable scalability, allowing the
+application to handle larger datasets and be deployed more efficiently. Adding multi-language
+support would increase accessibility for a global audience, while implementing security
+enhancements like user authentication and secure data sharing would ensure that sensitive loan
+data is protected. A user feedback loop could be incorporated to continuously fine-tune the
+model, improving accuracy over time based on user input. Finally, creating a mobile app
+version would make the tool more versatile and accessible, allowing users to train models and
+make predictions on-the-go. These improvements would make the system more efficient,
+scalable, and adaptable for real-world applications in loan approval automation.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+37
+
+Future of Loan Approvals with Explainable AI
+
+14. CONCLUSION
+
+The project “Future of Loan Approvals with Explainable AI” presents a modern and intelligent
+approach to transforming the traditional loan approval process. By integrating machine
+learning algorithms with explainable AI (XAI) techniques, the system aims to automate and
+enhance decision-making in financial institutions while maintaining a high level of
+transparency, fairness, and accountability.
+
+Traditional loan processing methods often involve time-consuming manual reviews, rigid rule-
+based systems, and potential human bias. This project addresses these limitations by deploying
+advanced models that not only assess loan eligibility with precision but also provide clear,
+interpretable explanations for every outcome. Tools like SHAP (SHapley Additive
+exPlanations) ensure that both loan applicants and financial analysts can understand why a
+particular decision—approval or rejection—was made, thus building trust and aligning with
+ethical AI practices.
+
+The system also emphasizes user-friendliness and data security. Applicants can easily upload
+their information through a clean and intuitive interface, while backend processes handle data
+validation, prediction, and reasoning. Financial institutions benefit from reduced processing
+time, consistent evaluation standards, and improved operational efficiency.
+
+Moreover, the architecture is designed to be scalable and adaptable, making it suitable for real-
+world deployment in banking and fintech environments. The use of frameworks like Django,
+along with front-end technologies such as HTML, CSS, and JavaScript, ensures that the
+platform is both responsive and extensible.
+
+In conclusion, this project not only demonstrates how AI can streamline and improve loan
+processing but also highlights the importance of explainability in building user confidence and
+regulatory compliance. It lays a strong foundation for future innovations in financial decision
+systems, where data-driven insights and transparency are paramount.
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+38
+
+Future of Loan Approvals with Explainable AI
+
+15. REFERENCES
+1. Ribeiro, M. T., Singh, S., & Guestrin, C. (2016). "Why Should I Trust You?":
+Explaining the Predictions of Any Classifier. Proceedings of the 22nd ACM SIGKDD
+International Conference on Knowledge Discovery and Data Mining, pp. 1135–1144.
+DOI: https://doi.org/10.1145/2939672.2939778
+2. Lundberg, S. M., & Lee, S. I. (2017). A Unified Approach to Interpreting Model
+Predictions. Advances in Neural Information Processing Systems, 30. Available:
+https://arxiv.org/abs/1705.07874
+3. Doshi-Velez, F., & Kim, B. (2017). Towards A Rigorous Science of Interpretable
+Machine Learning. arXiv preprint. Available: https://arxiv.org/abs/1702.08608
+4. Rajkomar, A., Dean, J., & Kohane, I. (2019). Machine Learning in Medicine. New
+England Journal of Medicine, 380, pp. 1347–1358. DOI:
+https://www.nejm.org/doi/10.1056/NEJMra1814259
+5. Guidotti, R., Monreale, A., Ruggieri, S., Turini, F., Giannotti, F., & Pedreschi, D.
+(2018). A Survey of Methods for Explaining Black Box Models. ACM Computing
+Surveys (CSUR), 51(5), pp. 1–42. DOI: https://doi.org/10.1145/3236009
+6. Biran, O., & Cotton, C. (2017). Explanation and Justification in Machine Learning: A
+Survey. IJCAI 2017 Workshop on Explainable AI (XAI).
+7. Sharma, N., Bhutia, R., Sardar, V., George, A. P., & Ahmed, F. (2021). Novel Hiring
+Process Using Machine Learning and Natural Language Processing. IEEE
+International Conference on Electronics, Computing and Communication
+Technologies, pp. 1–6. DOI: https://ieeexplore.ieee.org/document/9622692
+8. Barredo Arrieta, A., Díaz-Rodríguez, N., Del Ser, J., et al. (2020). Explainable Artificial
+Intelligence (XAI): Concepts, Taxonomies, Opportunities and Challenges toward
+Responsible AI. Information Fusion, 58, pp. 82–115. DOI:
+https://www.sciencedirect.com/science/article/abs/pii/S1566253519308103?via%3Dih
+ub
+9. Khandani, A. E., Kim, A. J., & Lo, A. W. (2010). Consumer Credit-Risk Models via
+Machine Learning Algorithms. Journal of Banking & Finance, 34(11), pp. 2767–2787.
+DOI:
+https://www.sciencedirect.com/science/article/abs/pii/S0378426610002372?via%3Dih
+ub
+10. Wachter, S., Mittelstadt, B., & Floridi, L. (2017). Why a Right to Explanation of
+Automated Decision-Making Does Not Exist in the General Data Protection
+Regulation. International Data Privacy Law, 7(2), pp. 76–99. DOI:
+https://academic.oup.com/idpl/article-
+abstract/7/2/76/3860948?redirectedFrom=fulltext&login=false
+
+Department of Computer Science and Engineering    CMR Institute of Technology
+
+39
