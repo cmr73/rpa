@@ -1,0 +1,149 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="data_scraping" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="data_scraping_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="data_scraping" sap:VirtualizedContainerService.HintSize="869.2,736.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="516.8,713.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome All products  Books to Scrape - Sandbo" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,630.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="155c688c-8f65-4fce-ac83-3b40741c214e" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,390.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="sd:DataTable" Name="ext_data" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ext_data]" DisplayName="Extract Table Data 'Extract Table Data(1)'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Name of Book'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Price'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Stock'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='h3' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='fulltext'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='p' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="Rows" MaximumResults="1000" ScopeIdentifier="155c688c-8f65-4fce-ac83-3b40741c214e" Version="V4">
+                <uix:NExtractData.NextLink>
+                  <uix:TargetAnchorable BrowserURL="books.toscrape.com/catalogue/page-1.html" CVScreenId="46ad5135-b2bd-40dd-9e37-f0a1a452cc18" CvElementArea="1630, 924, 76, 45" CvTextArea="1650, 936, 35, 16" CvTextArgument="next" CvType="Button" DesignTimeRectangle="1633, 927, 70, 40" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='next' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='next' tag='A' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='next' /&gt;" Guid="d47ff2f9-b151-4e07-af2f-b00d5a6929a3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='All products | Books to Scrape - Sandbox' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive">
+                    <uix:TargetAnchorable.PointOffset>
+                      <uix:PointOffset />
+                    </uix:TargetAnchorable.PointOffset>
+                  </uix:TargetAnchorable>
+                </uix:NExtractData.NextLink>
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable BrowserURL="https://books.toscrape.com/catalogue/page-1.html" ContentHash="ihJb2SzfXUOvTmrGnouaqw" DesignTimeRectangle="597, 327, 1125, 2562" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl tag='OL' /&gt;" Guid="595b625f-343e-4b18-8662-19dcec3ac4d8" InformativeScreenshot="1728f26c204a8709a49da3bc80cccdaf.png" Reference="meD2smz1G0mgiW94rLE5VA/--hr016KbEO-VpZFQolqDg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='All products | Books to Scrape - Sandbox' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" />
+                </uix:NExtractData.Target>
+              </uix:NExtractData>
+              <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[ext_data]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="416,140.8" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="B2" WorkbookPath="datascrape.xlsx" />
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="qX8VwSPYMUGJD8D3uZyp4g" IconBase64="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" InformativeScreenshot="763be0d4cf54cdc11b258056f2fc5cc0.jpg" Reference="meD2smz1G0mgiW94rLE5VA/1p_tjyBGDkCfmCSbw--nYw" Selector="&lt;html app='chrome.exe' title='All products | Books to Scrape - Sandbox' /&gt;" Url="https://books.toscrape.com/" Version="V2" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
